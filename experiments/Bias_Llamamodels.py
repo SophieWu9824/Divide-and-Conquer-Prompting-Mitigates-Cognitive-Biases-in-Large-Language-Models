@@ -1,8 +1,3 @@
-# prerequisit: enough credit
-# Sophie Wu 2024.8.25
-# function: Test Llama models with all methods in one place
-# python 3.8.1
-
 import os
 import openpyxl
 import shutil
@@ -12,7 +7,7 @@ from openai import OpenAI
 import openpyxl.workbook
 
 ##### Llama API ##########
-nvidia_api_key = os.getenv("NVIDIA_API_KEY2")
+nvidia_api_key = os.getenv("NVIDIA_API_KEY")
 client = OpenAI(
     api_key = nvidia_api_key, 
     base_url = "https://integrate.api.nvidia.com/v1",
