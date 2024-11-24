@@ -1,8 +1,3 @@
-
-# Sophie Wu 2024.8.25
-# function: Test Chinese LLM models with all methods in one place
-# python 3.8.1
-
 import os
 import openpyxl
 import shutil
@@ -18,7 +13,7 @@ from dashscope.api_entities.dashscope_response import Role
 
 ####### Zhipu ####### 
 def ZhipuResponse(prompt,Method_addition):
-    mykey = 'c4fb1687cbff59262223286a49deb47f.ZsKXoRJdcuroAgNw'
+    mykey = 'zhipu key'
     zhipuClient = ZhipuAI(api_key= mykey)
     prompt = Method_addition+' \n'+prompt
     response = zhipuClient.chat.completions.create(
@@ -34,7 +29,7 @@ def ZhipuResponse(prompt,Method_addition):
     return answer
 
 ####### Qwen ####### 
-dashscope.api_key = 'sk-ecc6d8e1769845acadaa9c4f64f85e8b' 
+dashscope.api_key = 'dashscope key' 
 def QwenResponse(prompt,Method_addition):
     prompt = Method_addition+' \n'+prompt
     messages = [{'role':Role.SYSTEM,'content':'Your are a helpful assistant.'},
@@ -59,7 +54,7 @@ def QwenResponse(prompt,Method_addition):
 
 ####### Llama Family: Atom-7B-Chat ####### 
 llamaClient = OpenAI(
-    api_key = "sk-a04912abb9613e46a2e0fefe4c1a65ed", 
+    api_key = "llama key", 
     base_url = "https://api.atomecho.cn/v1",
     )
 def LlamaResponse(prompt,Method_addition):
