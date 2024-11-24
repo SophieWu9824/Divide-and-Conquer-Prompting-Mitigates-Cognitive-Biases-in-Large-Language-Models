@@ -1,8 +1,4 @@
 
-# Sophie Wu 2024.8.29
-# function: Test GPT models with all methods in one place
-# python 3.12.4 Anaconda3
-
 import os
 import openpyxl
 import shutil
